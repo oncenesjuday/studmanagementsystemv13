@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@if (TempData["SAVE RJUDDDDDDY AY!!"] != null)
+{
+    <script>
+        alert('@TempData["SAVE RJUDDDDDDY AY!!"]');
+        console.info('@TempData["SAVE RJUDDDDDDY AY!!"]');
+    </script>
+}
+else if (TempData["GI AHAK WALAAAAA"] != null)
+{
+    <script>
+        alert('@TempData["GI AHAK WALAAAAA"]');
+        console.error('@TempData["GI AHAK WALAAAAA"]');
+    </script>
+}
+
+
+<form method="post" action="@Url.Action("EnrollmentForm11", "Enrollment")">
+    <div class="row container mt-5">
+        <h1.1>Student's Name: </h1.1>
+        <input type="text" class="form-control border-2" name="Name" />
+    </div>
+    <div class="row">
+        <br>
+        <button type="text" class="btn btn-primary">Submit</button>
+        
+    </div>
+</form>
