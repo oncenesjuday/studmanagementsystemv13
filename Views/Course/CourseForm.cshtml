@@ -3,42 +3,73 @@
 *@
 @{
 }
-<div class="container">
-    <div class="row border">
-        <div class="col-3">
-            <h4 class="display-text">Course Form</h4>
-        </div>
-        <div class="col row">
-            <div class="col">
-                <input type="type" number="number" value="" />
-                <span class="span-text">Course ID</span>
+
+<form method="post">
+    <div class="container">
+        <div class="row border">
+            <div class="col-3">
+                <h4 class="display-text">Course Code</h4>
             </div>
-            <div class="col">
-                <input type="type" number="number" value="" />
-                <span class="span-text">Course No.</span>
-            </div>
-            <br></br>
-            <div class="row">
-                <div class="col row">
-                    <div class="row">
-                        <div>
-                            <input class="input-text-size" type="type" text="text" value="" />
-                            <span class="span-text">Course Title</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div>
-                            <input class="input-text-size" type="type" text="text" value="" />
-                            <span class="span-text">Course Description</span>
-                        </div>
+            <div class="col row">
+                <div class="row">
+                    <div>
+                        <span class="span-text">Code*</span>
+                        <input class="input-text-size" type="text" name="Code" value="" />
                     </div>
                 </div>
             </div>
-
         </div>
 
+        <div class="row border">
+            <div class="col-3">
+                <h4 class="display-text">Course Title</h4>
+            </div>
+            <div class="col row">
+                <div class="row">
+                    <div>
+                        <span class="span-text">Title*</span>
+                        <input class="input-text-size" type="text" name="Title" value="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row border">
+            <div class="col-3">
+                <h4 class="display-text">Course Units</h4>
+            </div>
+            <div class="col row">
+                <div class="col row">
+                    <div class="col">
+                        <div>
+                            <span class="span-text">Lecture*</span>
+                            <input class="input-text-size" type="text" name="Lecture" value="" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <span class="span-text">Laboratory*</span>
+                        <input class="input-text-size" type="type" name="Laboratory" value="" />
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-</div>
-
-<h1></h1>
+    <div class="row border">
+        <div class="col-3">
+            <h4 class="display-text">Course Description</h4>
+        </div>
+        <div class="col row">
+            <div class="row">
+                <div>
+                    <span class="span-text">Description Here*</span>
+                    <input class="input-text-size" type="text" name="Description" value="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+        <br>
+        <button id="" type="text" class="btn btn-primary">Submit</button>
+    </div>
+</form>

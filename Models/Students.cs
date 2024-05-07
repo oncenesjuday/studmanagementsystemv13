@@ -12,7 +12,7 @@
         public string City { get; set; }
         public string Province { get; set; }
         public DateTime BDate { get; set; }
-        public string Gender { get; set; }v
+        public string Gender { get; set; }
         public int Pnumber { get; set; }
         public string EmailAdd { get; set; }
         public string Yearlevel { get; set; }
