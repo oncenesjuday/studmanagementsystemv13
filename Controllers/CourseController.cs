@@ -11,7 +11,10 @@ namespace studmanagementsystemv13.Controllers
         {
             _courseContext = courseContext;
         }
-
+        public IActionResult Course()
+        {
+            return View();
+        }
         public IActionResult CourseForm()
         {
             return View();

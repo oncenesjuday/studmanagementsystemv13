@@ -3,7 +3,7 @@
     public class Students
     {
         public int ID { get; set; }
-        public string Name { get; set; }
+        //public string Name { get; set; }
         public string Lname { get; set; }
         public string Fname { get; set; }
         public string Mname { get; set; }

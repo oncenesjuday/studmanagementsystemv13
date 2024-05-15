@@ -1,0 +1,176 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+
+<div class="container">
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>students is Enrolled Successfuly</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+    }
+    else if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Failed</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+    }
+</div>
+<form method="post" action="@Url.Action("UpdateEnrollmentForm", "Enrollment")">
+    <div class="container">
+        <h1>STUDENT FORM</h1>
+        <div class="container">
+            <div class="row border">
+                <div class="col-3">
+                    <h4 class="display-text">Student Number</h4>
+                </div>
+                <div class="col row">
+                    <div class="col">
+                        <input type="number" name="ID" value="@Model.ID" />
+                        <span class="span-text">Student ID</span>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="row border">
+                <div class="col-3">
+                    <h4 class="display-text">Full Name</h4>
+                </div>
+                <div class="col row">
+                    <div class="col">
+                        <input type="text" name="Lname" value="@Model.Lname" />
+                        <span class="span-text">Last Name</span>
+                    </div>
+                    <div class="col">
+                        <input type="text" name="Fname" value="@Model.Fname" />
+                        <span class="span-text">First Name</span>
+                    </div>
+                    <div class="col">
+                        <input type="text" name="Mname" value="@Model.Mname" />
+                        <span class="span-text">Middle Name</span>
+                    </div>
+                    <div class="col">
+                        <input type="text" name="Suffix" value="@Model.Suffix" />
+                        <span class="span-text">Suffix</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row border">
+                <div class="col-3">
+                    <h4 class="display-text">Address</h4>
+                </div>
+                <div class="col row">
+                    <div class="row">
+                        <div>
+                            <input class="input-text-size" type="text" name="StreetAdd" value="@Model.StreetAdd" />
+                            <span class="span-text">Street Address</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input class="input-text-size" type="text" name="City" value="@Model.City" />
+                            <span class="span-text">City</span>
+                        </div>
+                        <div class="col">
+                            <input class="input-text-size" type="text" name="Province" value="@Model.Province" />
+                            <span class="span-text">State/Province</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row border">
+                <div class="col-3">
+                    <h4 class="display-text">Birth Date</h4>
+                </div>
+                <div class="col row">
+                    <div class="col">
+                        <input class="input-text-size" type="date" name="BDate" value="@Model.BDate.ToString("yyyy-MM-dd")" required />
+
+                    </div>
+                </div>
+            </div>
+            <div class="row border">
+                <div class="col-3">
+                    <h4 class="display-text">Gender</h4>
+                </div>
+                <div class="col row">
+                    <div class="col">
+                        <select class="input-text-size" name="Gender">
+                           <option>@Model.Gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Non-Binary</option>
+                        </select>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="row border">
+                <div class="col-3">
+                    <h4 class="display-text">Contact Information</h4>
+                </div>
+                <div class="col row">
+                    <div class="row">
+                        <div class="col">
+                            <input type="number" name="Pnumber" value="@Model.Pnumber" />
+                            <span class="span-text">Phone Number</span>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="EmailAdd" value="@Model.EmailAdd" />
+                            <span class="span-text">Email Address</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row border">
+                <div class="col-3">
+                    <h4 class="display-text">Year Level</h4>
+                </div>
+                <div class="col row">
+                    <div class="row">
+                        <div class="col">
+                            <select class="input-text-size" name="Yearlevel" value="@Model.Yearlevel">
+                               <option>@Model.Yearlevel</option>
+                                <option>1st Year</option>
+                                <option>2nd Year</option>
+                                <option>3rd Year</option>
+                                <option>4rd Year</option>
+                                <option>5rd Year</option>
+                            </select>
+                            <span class="span-text">Year Level</span>
+                        </div>
+                        <div class="col">
+                            <select class="input-text-size" name="Degree" value="@Model.Degree">
+                                <option>@Model.Degree</option>
+                                <option>BSCPe</option>
+                                <option>UG</option>
+                                <option>AKO</option>
+                                <option>NALANG</option>
+                                <option>DIAY</option>
+
+                            </select>
+                            <span class="span-text">Degree</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="row">
+            <br>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+
+</form>
